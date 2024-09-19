@@ -6,34 +6,37 @@
 
 .container-fluid{
     width: 100%;
-    height: 125vh; /*80px*/
-    background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,00.5)50%), url(../view/img/animais-1.jpg);
-    background-size: cover;
+    height: 99vh; /*80px*/
+    background: linear-gradient(to left, rgba(0,0,0,0.1)50%, rgba(0,0,0,0.1)50%), url(../view/img/animais-1.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.container{
-    width: 1200px;
-    height: 80px;
-    /*background-color: rgb(238, 56, 168);*/
+.container{ /*head*/
+    position: relative;
+    background-color: rgb(97, 160, 196);
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 250px;
+    padding: 20px 50px;
 }
 
 .container h2{
-    font-family: arial;
-    font-size: 30px;
+    font-family: Cambria;
+    font-size: 35px;
     color: #fcfaf9;
     cursor: pointer;
+    width: 25%;
 }
 
 .container ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .container ul li{
@@ -47,36 +50,38 @@
 }
 
 .container ul li:first-child{
-    color: blue;
+    color: rgb(255, 255, 255);
 }
 
 .container ul li:hover{
-    color: blue;
+    color: rgb(143, 209, 79);
 }
 
 .container .botao{
-    width: 120px;
-    height: 80px;
+    width: 90px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     border: none;
-    background-color: rgb(238, 56, 168);
-    color: rgb(238, 56, 168);
+    background-color: rgb(97, 160, 196); /* #dd94a7 */
+    color: rgb(233, 211, 224);
     transition: 0.5s;
 }
 
 .container .botao:hover{
-    background-color: rgb(251, 255, 6);
+    background-color: rgb(255, 255, 255);
     color: #fff;
 }
 
 .content{
-    width: 1600px;
+    width: 100%;
     height: 100vh;
-    background-color: rgb(49, 145, 30);
+    background-color: rgb(111, 223, 88);
     margin: auto;
+    background-blend-mode: screen;
+
 }
 
 .content h1{
@@ -96,7 +101,7 @@
 }
 
 .content .botao{
-    width: 150px;
+    width: 120px;
     height: 25px;
     border-radius: 10px;
     font-size: 18px;
@@ -116,6 +121,6 @@
 }
 
 ion-icon{
-    font-size: 75px;
-    color: black;
+    font-size: 50px;
+    color: rgb(63, 62, 62);
 }
