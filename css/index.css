@@ -1,126 +1,251 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Varela Round;
 }
-
-.container-fluid{
+.header{        /* Cabeçalho */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 99vh; /*80px*/
-    background: linear-gradient(to left, rgba(0,0,0,0.1)50%, rgba(0,0,0,0.1)50%), url(../view/img/animais-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.container{ /*head*/
-    position: relative;
-    background-color: rgb(97, 160, 196);
-    margin: auto;
+    height: 10%;
+    padding: 10px 100px;
+    background: #1f232c;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    z-index: 100;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.8);
+
 }
 
-.container h2{
-    font-family: Cambria;
-    font-size: 35px;
-    color: #fcfaf9;
-    cursor: pointer;
-    width: 25%;
+.logo{          /* Nome da marca (canto esquerdo) */
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.container ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar a{      /* Barra de navegação (menu) */
+    position: relative;
     font-size: 25px;
+    color: #fff;
     font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
 }
 
-.container ul li{
-    font-family: arial;
-    color: #fff;
-    list-style: none;
-    margin-right: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.5s;
+.navbar a::before{      /* Barra de navegação (transição do sublinhado) */
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #cfe1eb;
+    transition: 0.3s;
 }
 
-.container ul li:first-child{
-    color: rgb(255, 255, 255);
-}
+/* Precisa do before e do hover para funcionar */
 
-.container ul li:hover{
-    color: rgb(143, 209, 79);
-}
-
-.container .botao{
-    width: 90px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(97, 160, 196); /* #dd94a7 */
-    color: rgb(233, 211, 224);
-    transition: 0.5s;
-}
-
-.container .botao:hover{
-    background-color: rgb(255, 255, 255);
-    color: #fff;
-}
-
-.content{
+.navbar a:hover::before{      /* Barra de navegação (transição do sublinhado) */
     width: 100%;
-    height: 100vh;
-    background-color: rgb(111, 223, 88);
-    margin: auto;
-    background-blend-mode: screen;
 
 }
 
-.content h1{
-    font-family: arial;
-    font-weight: bold;
-    color: #fff;
-    font-size: 50px;
-    padding-top: 100px;
-}
-
-.content p{
-    font-family: Arial;
-    font-weight: bold;
-    font-size: #000;
-    line-height: 30px;
-    padding-top: 30px;
-}
-
-.content .botao{
+.header .botao button{
     width: 120px;
-    height: 25px;
-    border-radius: 10px;
-    font-size: 18px;
-    border: 2px solid #fff;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.header .botao .cadastrar{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 110%;
+}
+
+.header .botao .entrar{
+    background-color: #fff;
+    color:#000000;
+    font-size: 110%;
+}
+
+/* SEGUNDA PARTE - CONTEÚDO + DESCRIÇÃO ITEM */
+.carrossel{      /* Fundo da página */
+    height: 100vh;
+}
+
+.descricao .info-box-descricao{      /* Descrição do item + posição da info */
+    position: absolute;
+    left: 5%; /* 50% joga para direita (sobrando um palmo até a barra), 5% fica na esquerda */
+    top: 50%;
+    transform: translateY(-50%); /* translateY joga o texto para o canto direito */
+    width: 450px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;   /* Esconde os outros textos em baixo do primeiro */
+}
+
+.descricao.ativo .info-box-descricao{
+    z-index: 2;
+}
+
+.info-box-descricao .info-slider{       /* VER O Q EH ISSO*/
+    height: inherit;
+    transition: 0.5s ease;
+}
+
+.info-slider .info-item{            /* Essa parte é o info-box todo o texto do item */
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    transform: translateY(calc(var(--i) * 100%));
+}
+
+.info-item h2{      /* Título do item que se encontra dentro da DIV info-item */
+    font-size: 40px;
+    line-height: 1;     /* Mexe na distancia da quebra de linha */
+}
+
+.info-item p{       /* Dentro da DIV info-item, texto da descrição do produto */
+    font-size: 16px;
+    margin: 15px 0 20px;    /* 1º px é o espaçamento entre as linhas de cima, 2º deixa de dar um tab no texto, 3º espaçamento entre linhas de baixo */
+}
+
+.info-item .link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    background: transparent;
+    border: 2px solid #fff;      /* Cria uma box para o href */
+    border-radius: 40px; /* Formato  da borda, arredondado */
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1); /* Sombra ao redor da borda rgb(intensidade da cor, 0.1 transparencia da cor), o 10px é a intensidade da sombra, quanto menor mais concentrada ela é */
+    font-size: 16px;
+    color: #241e1e;    /* Cor da fonte do link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* IMG */
+.descricao .img-box{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 800px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-box .img-slider{
+    width: inherit;
+    height: inherit;
+    transition: 0.5s ease;
+}
+
+.img-slider .img-descricao{
+    width: inherit;
+    height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
-    color: #f6ff73;
-    transition: 0.5s;
-    margin-top: 30px;
+    transform: translateX(calc(var(--i) * 100%));
 }
 
-.content .botao:hover{
-    background-color: #fff;
-    color: rgb(255, 6, 102);
+.img-descricao img{
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    transform: scale(0);
+    transition: 0.5s ease;
 }
 
-ion-icon{
-    font-size: 50px;
-    color: rgb(63, 62, 62);
+.descricao.ativo .img-descricao img{
+    transform: scale(1);
+}
+
+.minifoto{      /* Lista das mini fotos */
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+}
+
+.minifoto li{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    /*border: 2px solid rgb(23, 252, 2); tirando isso, some a borda ao redor da foto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   /* No lugar colocamos sombra */
+    cursor: pointer; /* Permite clicar sobre a img */
+    margin: 20px 0; /* Espaçamento entre elas */
+    overflow: hidden;   /* Faz o border-radius vir pra cima e enquadrar a foto */
+}
+
+.minifoto li.selecionado{
+    border: 3px solid #fff;
+}
+
+.minifoto li img{       /* Para ajeitar e enquadrar as minifotos */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.descricao .fundoicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.descricao.ativo .fundoicon{
+    opacity: 1;
+}
+
+.descricao .fundoicon::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    filter: blur(200px);
+}
+
+.descricao:nth-child(1) .fundoicon{
+    background: #80bbc0;
+}
+
+.descricao:nth-child(2) .fundoicon{
+    background: #fde18e;
+}
+
+.descricao:nth-child(3) .fundoicon{
+    background: #dfc8dc;
+}
+
+.descricao:nth-child(4) .fundoicon{
+    background: #97d4a9;
+}
+
+.descricao:nth-child(5) .fundoicon{
+    background: rgb(197, 155, 92);
 }

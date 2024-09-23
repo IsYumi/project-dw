@@ -1,48 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/index.css"/>
-
     <title>PETS</title>
 </head>
 
-
 <body>
+    <!--Cabeçalho com os links das guias-->
     <section>
-        <div class="container-fluid">
-            <div class="container">
-                <h2>MERCADINHO PET</h2>
-                <h3>
-                    <ul>
-                        <li>Início</li>
-                        <li>Loja</li>
-                        <li>Assinatura</li>
-                        <li>Dúvidas Frequentes</li>
-                        <li>Sobre</li>
-                    </ul>
-                </h3>
-                <button class="botao"><ion-icon name="cart-outline"></ion-icon></button>
+        <div class="header">
+            <a href="#" class="logo">MUNDO PET</a>
+            <nav class="navbar">
+                <a href="#">Início</a>
+                <a href="#">Assinatura</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Sobre</a>
+            </nav>
+            <div class="botao">
+                <button class="cadastrar">Cadastre-se</button>
+                <button class="entrar">Entrar</button>
             </div>
         </div>
-        <div class="content">
-            <h1>SEU PET<br>FELIZ</h1>
-            <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Quis modi quibusdam assumenda repellat et <br>eveniet nemo debitis iusto ab id, aperiam, ipsa sunt<br> sint quasi tempora esse error dolore nisi.</p>
-            <button class="botao">Ver produtos</button>
-        </div>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </section>
 
+    <!--SEGUNDA PARTE - CONTEÚDO + DESCRIÇÃO ITEM-->
+    <section>
+        <div class="carrossel">
+            <!-- PRIMEIRA IMAGEM -->
+            <div class="descricao ativo">
+                <div class="fundoicon"></div>
+                <div class="info-box-descricao"> <!--info-box significa a volta do texto-->
+                    <div class="info-slider">
+                        <div class="info-item" style="--i:0;"> <!--DIV criada para o item em especifico-->
+                            <!-- style="--i:0; alterna entre os icones" -->
+                            <h2>KIT DOGUINHO</h2>
+                            <p>
+                                Transforme a rotina do seu melhor amigo com nosso Kit Doguinho! Ofereça qualidade e diversão com ração premium, 
+                                brinquedos interativos e guloseimas saudáveis. Assine agora e veja seu cão mais feliz e saudável!🐾✨<br> <br><i>*Imagens meramente ilustrativas.</i></p>
+                            <a href="#" class="link">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <div class="img-slider">
+                        <div class="img-descricao" style="--i:0;">
+                            <img src="../view/img/teste1.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SEGUNDA IMG -->
+            <div class="descricao">
+                <div class="fundoicon"></div>
+                <div class="info-box-descricao">
+                    <div class="info-slider">
+                        <div class="info-item" style="--i:1;">
+                            <h2>KIT GATINHO</h2>
+                            <p>Transforme a rotina do seu melhor amigo com nosso Kit Gatinho! Ofereça qualidade e diversão com ração premium, 
+                                brinquedos interativos e guloseimas saudáveis. Assine agora e veja seu cão mais feliz e saudável!🐱✨<br> <br><i>*Imagens meramente ilustrativas.</i></p>
+                                <a href="#" class="link">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <div class="img-slider">
+                        <div class="img-descricao" style="--i:1;">
+                            <img src="../view/img/img2.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--TERCEIRA IMG -->
+            <div class="descricao">
+                <div class="fundoicon"> </div>
+                <div class="info-box-descricao">
+                    <div class="info-slider">
+                        <div class="info-item" style="--i:2;">
+                            <h2>KIT RATINHO</h2>
+                            <p>Transforme a rotina do seu melhor amigo com nosso Kit Ratinho! Ofereça qualidade e diversão com ração premium, 
+                                brinquedos interativos e guloseimas saudáveis. Assine agora e veja seu cão mais feliz e saudável!🐭✨<br> <br><i>*Imagens meramente ilustrativas.</i></p>
+                                <a href="#" class="link">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <div class="img-slider">
+                        <div class="img-descricao" style="--i:2;">
+                            <img src="../view/img/img3.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--QUARTA IMG -->
+            <div class="descricao">
+                <div class="fundoicon"></div>
+                <div class="info-box-descricao">
+                    <div class="info-slider">
+                        <div class="info-item" style="--i:3;">
+                            <h2>KIT COELHINHO</h2>
+                            <p>Transforme a rotina do seu melhor amigo com nosso Kit Coelhinho! Ofereça qualidade e diversão com ração premium, 
+                                brinquedos interativos e guloseimas saudáveis. Assine agora e veja seu cão mais feliz e saudável!🐰✨<br> <br><i>*Imagens meramente ilustrativas.</i></p>
+                                <a href="#" class="link">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <div class="img-slider">
+                        <div class="img-descricao" style="--i:3;">
+                            <img src="../view/img/img4.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--QUINTA IMG -->
+            <div class="descricao">
+                <div class="fundoicon"></div>
+                <div class="info-box-descricao">
+                    <div class="info-slider">
+                        <div class="info-item" style="--i:4;">
+                            <h2>KIT PASSARINHO</h2>
+                            <p>Transforme a rotina do seu melhor amigo com nosso Kit Passarinho! Ofereça qualidade e diversão com ração premium, 
+                                brinquedos interativos e guloseimas saudáveis. Assine agora e veja seu cão mais feliz e saudável!🐦✨<br> <br><i>*Imagens meramente ilustrativas.</i></p>
+                                <a href="#" class="link">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <div class="img-slider">
+                        <div class="img-descricao" style="--i:4;">
+                            <img src="../view/img/img5.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="minifoto">
+                <li class="selecionado"><img src="../view/img/thumb1.png"></li>
+                <li><img src="../view/img/thumb2.png"></li>
+                <li><img src="../view/img/thumb3.png"></li>
+                <li><img src="../view/img/thumb4.png"></li>
+                <li><img src="../view/img/thumb5.png"></li>
+            </ul>
+        </div>
+    </section>
+    <script src="../script/index.js"></script>
 </body>
-
 
 </html>
