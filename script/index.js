@@ -2,6 +2,7 @@ const miniFotos = document.querySelectorAll(".minifoto li");
 const infoSlider = document.querySelectorAll(".info-slider");
 const imgSlider = document.querySelectorAll(".img-slider");
 const descricaos = document.querySelectorAll(".descricao");
+const assinar = document.querySelectorAll(".link")
 
 let index = 0;
 
@@ -24,5 +25,5 @@ miniFotos.forEach((minifoto, ind) => {
         document.querySelector('.descricao.ativo').classList.remove('ativo');
         descricaos[index].classList.add('ativo');
 
-    });
+    }); 
 });

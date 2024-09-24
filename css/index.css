@@ -1,9 +1,17 @@
-*{
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Varela Round;
 }
+
+body{
+    width: 90%;
+    margin-inline: auto;
+}
+
 .header{        /* Cabeçalho */
     position: fixed;
     top: 0;
@@ -62,13 +70,13 @@
 }
 
 .header .botao .cadastrar{
-    background-color: #ffffff;
+    background-color: #eeeded;
     color: #000000;
     font-size: 110%;
 }
 
 .header .botao .entrar{
-    background-color: #fff;
+    background-color: #eeeded;
     color:#000000;
     font-size: 110%;
 }
@@ -125,7 +133,7 @@
     align-items: center;
     width: 180px;
     height: 48px;
-    background: transparent;
+    background: #eeeded;
     border: 2px solid #fff;      /* Cria uma box para o href */
     border-radius: 40px; /* Formato  da borda, arredondado */
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.1); /* Sombra ao redor da borda rgb(intensidade da cor, 0.1 transparencia da cor), o 10px é a intensidade da sombra, quanto menor mais concentrada ela é */
@@ -231,7 +239,7 @@
 }
 
 .descricao:nth-child(1) .fundoicon{
-    background: #80bbc0;
+    background: #80bbc0; 
 }
 
 .descricao:nth-child(2) .fundoicon{
@@ -248,4 +256,133 @@
 
 .descricao:nth-child(5) .fundoicon{
     background: rgb(197, 155, 92);
+}
+
+/* TERCEIRA PARTE - INFORMAÇÕES SOBRE */
+
+.titulo1{
+    padding: 5rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+.titulo1 .gridtitulo {
+    font-size: 35px;
+    border-radius: 6px;
+}
+
+.slot img{
+    max-width: 50%;
+    display: block;
+
+}
+
+.instrucao{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.slot{
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;    /* Corrige na tela quando ela diminui */
+}
+
+.slot img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  PARCERIA   */
+
+.titulo{
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.marcatitulo {
+    font-size: 25px;
+}
+
+.marcas{
+    /*width: 90%;
+    max-width: 1536px;*/
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        );
+}
+
+.marcas img {
+    max-height: 100%;
+    max-width: 100%;
+
+    margin-top: 5%;
+}
+
+@keyframes animacaodireita{
+    to {
+        left: -200px;
+    }
+}
+
+
+.parceria{
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: animacaodireita;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item1{
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2{
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3{
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4{
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5{
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6{
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7{
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8{
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }
