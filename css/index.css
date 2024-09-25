@@ -388,45 +388,38 @@ body{
 
 
 footer{
-    background: #1f232c;
+    background:#1f232c;
     box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.8);
     padding-top: 50px;
 }
 
 .final-pag{
-    width: 1140px;
-    margin: auto;
+    width: 100%;
     display: flex;
-    justify-content: center;
-}
-
-.footer{
-    width: 33.3%;
 }
 
 .final-pag h3{
     font-size: 28px;
     margin-bottom: 15px;
-    text-align: center;
     color: #fff;
 }
 
 .final-pag p{
-    width: 100%;
-    margin: auto;
     padding: 7px;
     color: #fff;
 }
 
-.footer-pag ul{
-    text-align: center;
+.final-pag .esquerda {
+    text-align: left;
+    margin-left: 10%;
 }
 
-.social-icons li{
-    display: inline-block;
+.final-pag .direita {
     text-align: center;
-    padding: 5px;
+    align-content: right;
+    margin-left: 40%;
 }
+
 
 .social-icons li{
     display: inline-block;
