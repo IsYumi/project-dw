@@ -7,11 +7,13 @@
     font-family: Varela Round;
 }
 
+
 body{
     margin-inline: auto;
 }
 
-.header{        /* Cabeçalho */
+
+.header{
     position: fixed;
     top: 0;
     left: 0;
@@ -27,14 +29,14 @@ body{
 
 }
 
-.logo{          /* Nome da marca (canto esquerdo) */
+.logo{
     font-size: 32px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
 }
 
-.navbar a{      /* Barra de navegação (menu) */
+.navbar a{
     position: relative;
     font-size: 25px;
     color: #fff;
@@ -43,7 +45,7 @@ body{
     margin-left: 40px;
 }
 
-.navbar a::before{      /* Barra de navegação (transição do sublinhado) */
+.navbar a::before{
     content: "";
     position: absolute;
     top: 100%;
@@ -54,9 +56,7 @@ body{
     transition: 0.3s;
 }
 
-/* Precisa do before e do hover para funcionar */
-
-.navbar a:hover::before{      /* Barra de navegação (transição do sublinhado) */
+.navbar a:hover::before{
     width: 100%;
 
 }
@@ -74,40 +74,54 @@ body{
     font-size: 110%;
 }
 
+.header .botao .cadastrar:hover{
+    background-color: rgba(228, 231, 224, 0.603);
+    color: #fff;
+    font-size: 110%;
+    cursor: pointer;
+}
+
 .header .botao .entrar{
     background-color: #eeeded;
     color:#000000;
     font-size: 110%;
 }
 
-/* SEGUNDA PARTE - CONTEÚDO + DESCRIÇÃO ITEM */
-.carrossel{      /* Fundo da página */
+.header .botao .entrar:hover{
+    background-color: rgba(228, 231, 224, 0.603);
+    color:#ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+
+.carrossel{
     height: 100vh;
 }
 
-.descricao .info-box-descricao{      /* Descrição do item + posição da info */
+.descricao .info-box-descricao{
     position: absolute;
-    left: 5%; /* 50% joga para direita (sobrando um palmo até a barra), 5% fica na esquerda */
+    left: 5%;
     top: 50%;
-    transform: translateY(-50%); /* translateY joga o texto para o canto direito */
+    transform: translateY(-50%);
     width: 450px;
     height: 280px;
     display: flex;
     align-items: center;
     z-index: 1;
-    overflow: hidden;   /* Esconde os outros textos em baixo do primeiro */
+    overflow: hidden;
 }
 
 .descricao.ativo .info-box-descricao{
     z-index: 2;
 }
 
-.info-box-descricao .info-slider{       /* VER O Q EH ISSO*/
+.info-box-descricao .info-slider{
     height: inherit;
     transition: 0.5s ease;
 }
 
-.info-slider .info-item{            /* Essa parte é o info-box todo o texto do item */
+.info-slider .info-item{
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -116,14 +130,14 @@ body{
     transform: translateY(calc(var(--i) * 100%));
 }
 
-.info-item h2{      /* Título do item que se encontra dentro da DIV info-item */
+.info-item h2{
     font-size: 40px;
-    line-height: 1;     /* Mexe na distancia da quebra de linha */
+    line-height: 1;
 }
 
-.info-item p{       /* Dentro da DIV info-item, texto da descrição do produto */
+.info-item p{
     font-size: 16px;
-    margin: 15px 0 20px;    /* 1º px é o espaçamento entre as linhas de cima, 2º deixa de dar um tab no texto, 3º espaçamento entre linhas de baixo */
+    margin: 15px 0 20px;
 }
 
 .info-item .link{
@@ -133,16 +147,14 @@ body{
     width: 180px;
     height: 48px;
     background: #eeeded;
-    border: 2px solid #fff;      /* Cria uma box para o href */
-    border-radius: 40px; /* Formato  da borda, arredondado */
-    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1); /* Sombra ao redor da borda rgb(intensidade da cor, 0.1 transparencia da cor), o 10px é a intensidade da sombra, quanto menor mais concentrada ela é */
-    font-size: 16px;
-    color: #241e1e;    /* Cor da fonte do link */
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    color: #241e1e;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* IMG */
 .descricao .img-box{
     position: absolute;
     left: 35%;
@@ -181,7 +193,7 @@ body{
     transform: scale(1);
 }
 
-.minifoto{      /* Lista das mini fotos */
+.minifoto{
     position: absolute;
     right: 5%;
     top: 50%;
@@ -193,18 +205,17 @@ body{
     width: 95px;
     height: 95px;
     border-radius: 50%;
-    /*border: 2px solid rgb(23, 252, 2); tirando isso, some a borda ao redor da foto */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   /* No lugar colocamos sombra */
-    cursor: pointer; /* Permite clicar sobre a img */
-    margin: 20px 0; /* Espaçamento entre elas */
-    overflow: hidden;   /* Faz o border-radius vir pra cima e enquadrar a foto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    overflow: hidden;
 }
 
 .minifoto li.selecionado{
     border: 3px solid #fff;
 }
 
-.minifoto li img{       /* Para ajeitar e enquadrar as minifotos */
+.minifoto li img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -257,7 +268,7 @@ body{
     background: rgb(197, 155, 92);
 }
 
-/* TERCEIRA PARTE - INFORMAÇÕES SOBRE */
+
 
 .titulo1{
     padding: 5rem;
@@ -290,7 +301,7 @@ body{
     text-align: center;
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 3;    /* Corrige na tela quando ela diminui */
+    grid-row: span 3;
 }
 
 .slot img {
@@ -299,7 +310,6 @@ body{
     margin-right: auto;
 }
 
-/*  PARCERIA   */
 
 .titulo{
     text-align: center;
@@ -339,7 +349,6 @@ body{
         left: -200px;
     }
 }
-
 
 .parceria{
     width: 200px;

@@ -8,34 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="icon" href="../view/img/logo/pawprint.png" type="image/x-icon">
+
     <title>PETS</title>
 </head>
 
 <body>
-    <!-- PRIMEIRA PARTE - Cabeçalho com os links das guias-->
-    <div class="header">
-        <a href="#" class="logo">MUNDO PET</a>
-        <nav class="navbar">
-            <a href="#">Início</a>
-            <a href="#">Assinatura</a>
-            <a href="#">Dúvidas Frequentes</a>
-            <a href="#">Sobre</a>
-        </nav>
-        <div class="botao">
-            <button class="cadastrar">Cadastre-se</button>
-            <button class="entrar">Entrar</button>
-         </div>
-    </div>
+    <header>
+        <div class="header">
+            <a href="#" class="logo">MUNDO PET</a>
+            <nav class="navbar">
+                <a href="#">Início</a>
+                <a href="#">Assinatura</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Sobre</a>
+            </nav>
+            <div class="botao">
+                <a href="view/cadastro.html">
+                    <button class="cadastrar">Cadastre-se</button>
+                </a>
+                <a href="view/login.html">
+                    <button class="entrar">Entrar</button>
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <!--SEGUNDA PARTE - CONTEÚDO + DESCRIÇÃO ITEM-->
     <div class="carrossel">
-        <!-- PRIMEIRA IMAGEM -->
         <div class="descricao ativo">
             <div class="fundoicon"></div>
-            <div class="info-box-descricao"> <!--info-box significa a volta do texto-->
+            <div class="info-box-descricao"> 
                 <div class="info-slider">
-                    <div class="info-item" style="--i:0;"> <!--DIV criada para o item em especifico-->
-                        <!-- style="--i:0; alterna entre os icones" -->
+                    <div class="info-item" style="--i:0;">
                         <h2>KIT DOGUINHO</h2>
                         <p>
                             Transforme a rotina do seu melhor amigo com nosso Kit Doguinho! Ofereça qualidade e diversão com ração premium, 
@@ -47,12 +51,11 @@
             <div class="img-box">
                 <div class="img-slider">
                     <div class="img-descricao" style="--i:0;">
-                        <img src="../view/img/teste1.png"></img>
+                        <img src="../view/img/produto/teste1.png"></img>
                     </div>
                  </div>
             </div>
         </div>
-            <!-- SEGUNDA IMG -->
             <div class="descricao">
                 <div class="fundoicon"></div>
                 <div class="info-box-descricao">
@@ -68,12 +71,11 @@
                 <div class="img-box">
                     <div class="img-slider">
                         <div class="img-descricao" style="--i:1;">
-                            <img src="../view/img/img2.png"></img>
+                            <img src="../view/img/produto/img2.png"></img>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--TERCEIRA IMG -->
             <div class="descricao">
                 <div class="fundoicon"> </div>
                 <div class="info-box-descricao">
@@ -89,12 +91,11 @@
                 <div class="img-box">
                     <div class="img-slider">
                         <div class="img-descricao" style="--i:2;">
-                            <img src="../view/img/img3.png"></img>
+                            <img src="../view/img/produto/img3.png"></img>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--QUARTA IMG -->
             <div class="descricao">
                 <div class="fundoicon"></div>
                 <div class="info-box-descricao">
@@ -110,12 +111,11 @@
                 <div class="img-box">
                     <div class="img-slider">
                         <div class="img-descricao" style="--i:3;">
-                            <img src="../view/img/img4.png"></img>
+                            <img src="../view/img/produto/img4.png"></img>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--QUINTA IMG -->
             <div class="descricao">
                 <div class="fundoicon"></div>
                 <div class="info-box-descricao">
@@ -131,21 +131,20 @@
                 <div class="img-box">
                     <div class="img-slider">
                         <div class="img-descricao" style="--i:4;">
-                            <img src="../view/img/img5.png"></img>
+                            <img src="../view/img/produto/img5.png"></img>
                         </div>
                     </div>
                 </div>
             </div>
             <ul class="minifoto">
-                <li class="selecionado"><img src="../view/img/thumb1.png"></li>
-                <li><img src="../view/img/thumb2.png"></li>
-                <li><img src="../view/img/thumb3.png"></li>
-                <li><img src="../view/img/thumb4.png"></li>
-                <li><img src="../view/img/thumb5.png"></li>
+                <li class="selecionado"><img src="../view/img/icons_animais/thumb1.png"></li>
+                <li><img src="../view/img/icons_animais/thumb2.png"></li>
+                <li><img src="../view/img/icons_animais/thumb3.png"></li>
+                <li><img src="../view/img/icons_animais/thumb4.png"></li>
+                <li><img src="../view/img/icons_animais/thumb5.png"></li>
             </ul>
     </div>
 
-    <!--TERCEIRA PARTE - COMO FUNCIONA?-->
     <div class="titulo1">
         <div class = "gridtitulo"> 
             <h2>COMO FUNCIONA?</h2>
@@ -156,66 +155,64 @@
                 <p>Queremos saber o nome, o porte, a raça e a idade. 
                     Assim, vamos preparar o KIT do seu pet com todo cuidado e carinho.
                 </p>
-                <img src="../view/img/golden.gif" alt="img1"/>
+                <img src="../view/img/gifs_grid/golden.gif" alt="img1"/>
             </div>
             <div class="slot">
                 <h2>Escolha</h2>
                 <p>Escolha a trilha de experiência que mais combina com as necessidades ou preferências do seu pet.
                 </p>
-                <img src="../view/img/toy.gif" alt="img1"/>
+                <img src="../view/img/gifs_grid/toy.gif" alt="img1"/>
             </div>
             <div class="slot">
                 <h2>Receba em casa</h2>
                 <p>Prático e sem sair de casa! Todo mês seu pet receberá 
                     um novo tema, com produtos desenvolvidos por especialistas.
                 </p>
-                <img src="../view/img/door.gif" alt="img1"/>
+                <img src="../view/img/gifs_grid/door.gif" alt="img1"/>
             </div>
             <div class="slot">
                 <h2>Baixe nosso APP</h2>
                 <p>Com ele você pode adicionar outros produtos receber junto com seu KIT PET. Com desconto e frete grátis!
                 </p> 
-                <img src="../view/img/apps.gif" alt="img1"/>
+                <img src="../view/img/gifs_grid/apps.gif" alt="img1"/>
             </div>
         </div>
     </div>
 
-    <!--QUARTA PARTE - PARCERIA -->
     <div class="titulo">
             <div class = "marcatitulo">
                 <h2>Marcas com quem trabalhamos</h2>
             </div>
             <div class="marcas">
                 <div class="parceria item1">
-                    <img src="../view/img/granplus.jpg">
+                    <img src="../view/img/marcas/granplus.jpg">
                 </div>
                 <div class="parceria item2">
-                    <img src="../view/img/nutropica.png">
+                    <img src="../view/img/marcas/nutropica.png">
                 </div>
                 <div class="parceria item3">
-                    <img src="../view/img/origens.png">
+                    <img src="../view/img/marcas/origens.png">
                 </div>
                 <div class="parceria item4">
-                    <img src="../view/img/day.jpg">
+                    <img src="../view/img/marcas/day.jpg">
                 </div>
                 <div class="parceria item5">
-                    <img src="../view/img/dogchow.png">
+                    <img src="../view/img/marcas/dogchow.png">
                 </div>
                 <div class="parceria item6">
-                    <img src="../view/img/catchow.jpg">
+                    <img src="../view/img/marcas/catchow.jpg">
                 </div>
                 <div class="parceria item7">
-                    <img src="../view/img/pet.jpg">
+                    <img src="../view/img/marcas/pet.jpg">
                 </div>
                 <div class="parceria item8">
-                    <img src="../view/img/petsq.jpg">
+                    <img src="../view/img/marcas/petsq.jpg">
                 </div>
             </div>
         </div>
     </div>
     <script src="../script/index.js"></script>
 
-    <!-- Footer -->
     <footer>
         <div class="final-pag">
             <div class="esquerda">
@@ -230,9 +227,9 @@
                 <div class = "footer-pag">
                     <h3>Redes sociais</h3>
                     <ul class="social-icons">
-                        <li><a href="#"><img src="../view/img/facebook.png"></a></li>
-                        <li><a href="#"><img src="../view/img/instagram.png"></a></li>
-                        <li><a href="#"><img src="../view/img/twitter.png"></a></li>
+                        <li><a href="#"><img src="../view/img/redes/facebook.png"></a></li>
+                        <li><a href="#"><img src="../view/img/redes/instagram.png"></a></li>
+                        <li><a href="#"><img src="../view/img/redes/twitter.png"></a></li>
                     </ul>
                 </div>
             </div>
